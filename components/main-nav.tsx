@@ -14,13 +14,13 @@ export function MainNav() {
                 <Icons.logo className="h-6 w-6" />
                 <span className="font-bold">{siteConfig.name}</span>
             </Link>
-            <Link href="/blog"
+            <Link href="/portfolio"
                 className={cn(
                     "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-                    pathname === "/blog" ? "text-foreground" : "text-foreground/60"
+                    pathname === "/portfolio" ? "text-foreground" : "text-foreground/60"
                 )}>Portfolio
             </Link>
-            <Link href="/blog"
+            <Link href="/about-me"
                 className={cn(
                     "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
                     pathname === "/about-me" ? "text-foreground" : "text-foreground/60"
