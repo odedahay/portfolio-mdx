@@ -45,7 +45,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Providers>
-          <div className="relative flex min-h-dvh flex-col bg-background">
+          <div className="relative flex min-h-dvh flex-col bg-background p-5 sm:p-0">
             <SiteHeader />
             <main className="flex-1">{children}</main>
             {/* <SiteFooter /> */}
