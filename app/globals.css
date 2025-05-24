@@ -121,3 +121,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.subheading-anchor {
+  @apply no-underline hover:underline;
+}
+
