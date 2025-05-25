@@ -1,11 +1,26 @@
 import { posts } from "#site/content"
 import { PostItem } from "@/components/post-item";
+import { QueryPagination } from "@/components/query-pagination";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { sortPosts } from "@/lib/utils";
 
-export default async function PortfolioPage() {
+const POSTS_PER_PAGE = 5;
+
+interface PortfolioPageProps{
+    searchParams:{
+        page?: string;
+    }
+}
+
+export default async function PortfolioPage({searchParams}: PortfolioPageProps) {
+    const currentPage = Number(searchParams?.page) || 1;
     const sortedPosts = sortPosts(posts.filter((post)=> post.published));
-    const displayPosts = sortedPosts;
+    const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+
+    const displayPosts = sortedPosts.slice(
+        POSTS_PER_PAGE * (currentPage - 1),
+        POSTS_PER_PAGE * currentPage
+    );
 
     return (
         <div className="container mx-auto max-w-12xl py-6 lg:py-10">
@@ -13,11 +28,11 @@ export default async function PortfolioPage() {
                 <div className="flex-1 space-y-4">
                     <h1 className="inline-block font-black text-4xl lg:text-5xl">Portfolio</h1>
                     <p className="text-xl text-muted-foreground">
-                        My ramblings on all things web dev.
+                    Explore my portfolio to see my professional experience in action
                     </p>
                 </div>
             </div>
-            <div className="grid grid-cols-12 gap-3 mt-8">
+            <div className="grid grid-cols-12 gap-5 mt-8">
                 <div className="col-span-12 col-start-1 sm:col-span-8">
                     <hr className="my-8" />
                     {
@@ -40,6 +55,7 @@ export default async function PortfolioPage() {
                             }
                         </ul>) : (<p>Nothing to see here yet.</p>)
                     }
+                    <QueryPagination totalPages={totalPages} className="justify-end mt-4"/>
                 </div>
                 <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
                     <CardHeader>

@@ -14,7 +14,7 @@ interface PostItemProps {
 
 export function PostItem({ slug, title, description, date, coverImage }: PostItemProps) {
     return (
-        <article className="flex flex-row gap-6 border-border border-b py-3">
+        <article className="flex flex-row gap-6 border-border border-b py-5 mb-4">
             {coverImage && (
                 <div className="relative aspect-[16/9] w-1/3 min-w-[200px] overflow-hidden rounded-lg">
                     <Image
