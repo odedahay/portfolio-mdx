@@ -2,12 +2,11 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "./ui/pagination";
-import { cn } from "@/lib/utils";
 
 interface QueryPaginationProps {
     totalPages: number;
     className?: string;
-}
+  }
 
 export function QueryPagination({ totalPages, className }: QueryPaginationProps) {
     const pathname = usePathname();
@@ -39,7 +38,7 @@ export function QueryPagination({ totalPages, className }: QueryPaginationProps)
                 </PaginationLink>
                 </PaginationItem>))}
 
-            {prevPage <= totalPages ? (
+            {nextPage <= totalPages ? (
                 <PaginationItem>
                     <PaginationNext href={createPageURL(nextPage)} />
                 </PaginationItem>) : null}
