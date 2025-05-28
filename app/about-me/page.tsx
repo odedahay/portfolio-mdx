@@ -29,16 +29,16 @@ export default function AboutMe() {
                             {siteConfig.author}
                         </h2>
                         <p className="text-muted-foreground text-center break-words">
-                            Digital Designer
+                            Web Designer and Developer
                         </p>
                     </div>
                     <div className="mt-5">
                         <div className="mt-4 space-y-6">
                             <article>
-                                <p className="text-lg text-gray-900 mb-6 dark:text-gray-100">
+                                <p className="text-lg mb-6">
                                     As a dedicated UI Designer and Developer, I specialize in creating functional, user-centric designs that empower users to achieve their goals effortlessly. With a strong foundation in design principles, I craft visually appealing and intuitive interfaces that prioritize usability and accessibility. My passion lies in designing beautiful, seamless experiences that enhance and simplify everyday interactions.
                                 </p>
-                                <p className="text-lg text-gray-900 dark:text-gray-100">
+                                <p className="text-lg">
                                     I am committed to continuous growth, constantly refining my skills and staying updated with the latest design trends. A collaborative team player at heart, I thrive in environments where I can work alongside others to bring innovative ideas to life. I am excited to contribute my expertise and creativity to your team, helping to deliver exceptional user experiences that make a meaningful impact.
                                 </p>
                             </article>

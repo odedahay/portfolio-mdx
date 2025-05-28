@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "RodDahay",
-    url: "https://my-blog.com",
+    url: "https://roddahay.netlify.app/",
     description: "My Portfolio",
     author: "Rod Dahay",
     links: {

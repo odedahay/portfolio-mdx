@@ -49,10 +49,10 @@ const ContactPage = () => {
     return (
 
         <div className="container mx-auto max-w-screen-md py-6 lg:py-10">
-            <section className="bg-white dark:bg-gray-900 h-[65vh]">
+            <section className="h-[65vh]">
                 <div className="py-8 lg:py-16 px-4 text-center">
                     <h2 className="inline-block font-black text-4xl lg:text-5xl mb-8">Get in touch</h2>
-                    <p className="mb-8 lg:mb-16 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Get in touch with me if you have any questions, need assistance, or simply want to discuss a project. I'm always available and eager to connect. Feel free to reach out and let's start a conversation!</p>
+                    <p className="mb-8 lg:mb-16 font-light sm:text-xl">Get in touch with me if you have any questions, need assistance, or simply want to discuss a project. I'm always available and eager to connect. Feel free to reach out and let's start a conversation!</p>
 
 
                     <div className="mt-8 flex justify-center space-x-6 gap-5 flex-col md:flex-row">
