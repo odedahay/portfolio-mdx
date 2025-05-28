@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
-        <div className="container flex flex-col gap-4 text-center">
+        <div className="container mx-auto max-w-6xl text-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-balance">
           Hi, I Design & Develop <span className="inline-block sm:block">Digital Experiences</span>
           </h1>
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </section>
       {/* <div className="container mx-auto flex h-14 max-w-screen-2xl items-center"></div> */}
-      <section className="container mx-auto max-w-screen-2xl py-6 lg:py-10 flex flex-col space-y-6">
+      <section className="container mx-auto max-w-6xl py-6 lg:py-10 flex flex-col space-y-6">
       <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center">
           Latest Portfolio
         </h2>

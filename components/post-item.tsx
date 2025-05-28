@@ -36,7 +36,7 @@ export function PostItem({ slug, title, description, date, coverImage }: PostIte
                         {description}
                     </div>
                 </div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-4">
                     <dl>
                         <dt className="sr-only">Published On</dt>
                         <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
@@ -44,7 +44,7 @@ export function PostItem({ slug, title, description, date, coverImage }: PostIte
                             <time dateTime={date}>{formatDate(date)}</time>
                         </dd>
                     </dl>
-                    <Link href={slug} className={cn(buttonVariants({ variant: "link" }), "py-0")}>
+                    <Link href={slug} className={cn(buttonVariants({ variant: "link" }), "py-8 md:py-0")}>
                         Read More →
                     </Link>
                 </div>

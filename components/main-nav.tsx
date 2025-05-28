@@ -26,6 +26,12 @@ export function MainNav() {
                     pathname === "/about-me" ? "text-foreground" : "text-foreground/60"
                 )}>About Me
             </Link>
+            <Link href="/contact"
+                className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
+                    pathname === "/contact" ? "text-foreground" : "text-foreground/60"
+                )}>Contact
+            </Link>
         </nav>
     )
 }
