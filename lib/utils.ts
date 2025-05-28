@@ -20,4 +20,12 @@ export function sortPosts(posts: Array<Post>){
     if(a.date < b.date) return 1;
     return 0;
   });
+
+  // return posts
+  //   .filter(post => post.published)
+  //   .sort((a, b)=>{
+  //     if(a.date > b.date) return -1;
+  //     if(a.date < b.date) return 1;
+  //     return 0;
+  //   });
 }

@@ -1,13 +1,13 @@
 export const siteConfig = {
-    name: "RodDahay Portfolio",
+    name: "RodDahay",
     url: "https://my-blog.com",
     description: "My Portfolio",
     author: "Rod Dahay",
     links: {
-        twitter: "https://twitter.com/my-blog",
-        github: "https://github.com/my-blog",
-        linkedin: "https://www.linkedin.com/in/roddahay/",
-        instagram: "https://www.instagram.com/roddahay/",
+        twitter: "https://x.com/tweeter",
+        github: "https://github.com/odedahay",
+        linkedin: "https://www.linkedin.com/in/rodelio-dahay/",
+        instagram: "https://www.instagram.com/odedahay/",
     }
 }
 

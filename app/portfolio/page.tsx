@@ -13,7 +13,8 @@ interface PortfolioPageProps{
 }
 
 export default async function PortfolioPage({searchParams}: PortfolioPageProps) {
-    const currentPage = Number(searchParams?.page) || 1;
+    const awaitSearchParams = await searchParams;
+    const currentPage = Number(awaitSearchParams?.page) || 1;
     const sortedPosts = sortPosts(posts.filter((post)=> post.published));
     const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
 
