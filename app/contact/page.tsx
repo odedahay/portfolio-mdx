@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 
-
-export const metadata = {
-    title: 'Get in Touch'
-}
+export const metadata: Metadata = {
+    title: "Get in touch",
+    description: "Get in touch with me",
+  };
 
 const socialLinks = [
 

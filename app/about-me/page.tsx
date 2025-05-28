@@ -3,8 +3,8 @@ import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About Rod",
-    description: "Information about me",
+    title: "About Rod Dahay",
+    description: "Information about Rod Dahay",
   };
 
 

@@ -4,6 +4,14 @@ import { QueryPagination } from "@/components/query-pagination";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { sortPosts } from "@/lib/utils";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Portfolio",
+    description: "This is my portfolio page",
+  };
+
+
 const POSTS_PER_PAGE = 5;
 
 interface PortfolioPageProps{
