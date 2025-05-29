@@ -42,11 +42,13 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 }
 
 async function getPostFromParams(params: PostPageProps["params"]) {
-    if (!params?.slug) {
+    const resolvedParams = await params;
+    
+    if (!resolvedParams?.slug) {
         return null;
     }
-    const slugParams = await params.slug;
-    const slug = slugParams.join("/");
+    
+    const slug = resolvedParams.slug.toString();
     const post = posts.find((post) => post.slugAsParams === slug);
     return post;
 }
@@ -56,10 +58,8 @@ export async function generateStaticParams(): Promise<PostPageProps["params"][]>
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-    // Ensure params are properly awaited
-    const resolvedParams = await Promise.resolve(params);
-    const post = await getPostFromParams(resolvedParams);
-
+    const post = await getPostFromParams(params);
+  
     if (!post || !post.published) {
         notFound();
     }

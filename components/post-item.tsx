@@ -1,8 +1,9 @@
 import { cn, formatDate } from "@/lib/utils";
-import { Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "./ui/button";
+import { Icons } from "./icons";
 
 interface PostItemProps {
     slug: string;
@@ -45,7 +46,7 @@ export function PostItem({ slug, title, description, date, coverImage }: PostIte
                         </dd>
                     </dl>
                     <Link href={slug} className={cn(buttonVariants({ variant: "link" }), "py-8 md:py-0")}>
-                        Read More →
+                        Read More <ArrowRight className="h-4 w-4"/>
                     </Link>
                 </div>
             </div>

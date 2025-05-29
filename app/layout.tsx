@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/site-header";
 import { Providers } from "@/components/providers";
 import { siteConfig } from "@/config/site";
+import { SiteFooter } from "@/components/site-footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,7 +49,7 @@ export default function RootLayout({
           <div className="relative flex min-h-dvh flex-col bg-background p-5 sm:p-0">
             <SiteHeader />
             <main className="flex-1">{children}</main>
-            {/* <SiteFooter /> */}
+            <SiteFooter />
           </div>
         </Providers>
       </body>
