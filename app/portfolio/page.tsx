@@ -1,8 +1,9 @@
 import { posts } from "#site/content"
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
+import { Tag } from "@/components/tags";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { sortPosts } from "@/lib/utils";
+import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
 
 import { Metadata } from "next";
 
@@ -31,6 +32,9 @@ export default async function PortfolioPage({searchParams}: PortfolioPageProps) 
         POSTS_PER_PAGE * currentPage
     );
 
+    const tags = getAllTags(posts);
+    const sortedTags = sortTagsByCount(tags);
+
     return (
         <div className="container mx-auto max-w-12xl py-6 lg:py-10">
             <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
@@ -41,7 +45,7 @@ export default async function PortfolioPage({searchParams}: PortfolioPageProps) 
                     </p>
                 </div>
             </div>
-            <div className="grid grid-cols-12 gap-5 mt-8">
+            <div className="grid grid-cols-12 gap-10 mt-8">
                 <div className="col-span-12 col-start-1 sm:col-span-8">
                     <hr className="my-8" />
                     {
@@ -70,10 +74,10 @@ export default async function PortfolioPage({searchParams}: PortfolioPageProps) 
                 </div>
                 <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
                     <CardHeader>
-                        <CardTitle>Tags</CardTitle>
+                        <CardTitle className="text-2xl">Tags</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-wrap gap-2">
-                        Cards Here
+                       {sortedTags?.map((tag) => <Tag tag={tag} key={tag} count={tags[tag]} />)}
                     </CardContent>
                 </Card>
             </div>

@@ -32,7 +32,7 @@ export function PostItem({ slug, title, description, date, coverImage, tags }: P
             )}
             <div className="flex-1 flex flex-col justify-between">
                 <div>
-                    <h2 className="text-2xl font-bold">
+                    <h2 className="text-2xl">
                         <Link href={slug}>{title}</Link>
                     </h2>
                     <div className="flex gap-2">
