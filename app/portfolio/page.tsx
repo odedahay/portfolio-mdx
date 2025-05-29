@@ -49,7 +49,7 @@ export default async function PortfolioPage({searchParams}: PortfolioPageProps) 
                         <ul className="flex flex-col">
                            {
                                 displayPosts.map((post) => {
-                                const {slug, date, title, description, coverImage} = post;
+                                const {slug, date, title, description, coverImage, tags} = post;
                                 return (
                                     <li key={slug}>
                                         <PostItem 
@@ -57,7 +57,9 @@ export default async function PortfolioPage({searchParams}: PortfolioPageProps) 
                                             date={date} 
                                             title={title} 
                                             description={description}
-                                            coverImage={coverImage} />
+                                            coverImage={coverImage}
+                                            tags={tags}
+                                            />
                                     </li>
                                     );
                                 })

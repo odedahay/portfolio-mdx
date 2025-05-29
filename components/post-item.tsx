@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "./ui/button";
 import { Icons } from "./icons";
+import { Tag } from "./tags";
 
 interface PostItemProps {
     slug: string;
@@ -11,9 +12,10 @@ interface PostItemProps {
     description?: string;
     date: string;
     coverImage?: string;
+    tags?: Array<string>;
 }
 
-export function PostItem({ slug, title, description, date, coverImage }: PostItemProps) {
+export function PostItem({ slug, title, description, date, coverImage, tags }: PostItemProps) {
     return (
         <article className="flex flex-row gap-6 border-border border-b py-5 mb-4">
             {coverImage && (
@@ -33,6 +35,11 @@ export function PostItem({ slug, title, description, date, coverImage }: PostIte
                     <h2 className="text-2xl font-bold">
                         <Link href={slug}>{title}</Link>
                     </h2>
+                    <div className="flex gap-2">
+                        {tags?.map((tag) => (
+                            <Tag tag={tag} key={tag} />
+                        ))}
+                    </div>
                     <div className="mt-2 text-muted-foreground">
                         {description}
                     </div>
