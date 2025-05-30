@@ -25,7 +25,8 @@ const nextConfig = {
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '#site': './site',
+      '#site/content': './.velite',
+      '@': './',
     };
     return config;
   },
