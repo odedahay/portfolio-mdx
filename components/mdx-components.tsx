@@ -1,7 +1,9 @@
-import Image from 'next/image';
+"use client";
+
 import * as runtime from "react/jsx-runtime";
 import { Callout } from "./callout";
 import { cn } from "@/lib/utils";
+import { MDXImage } from "./mdx-image";
 
 const useMDXComponent = (code: string) => {
     const fn = new Function(code);
@@ -9,7 +11,7 @@ const useMDXComponent = (code: string) => {
 };
 
 const components = {
-    Image,
+    img: MDXImage,
     Callout,
     // h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     //     <h1 className={cn("mt-2 scroll-m-20 text-4xl font-bold tracking-tight", className)} {...props} />
