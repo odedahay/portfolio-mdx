@@ -18,7 +18,17 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  }
+  },
+  experimental: {
+    esmExternals: true,
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '#site': './site',
+    };
+    return config;
+  },
 }
 
 module.exports = nextConfig 
