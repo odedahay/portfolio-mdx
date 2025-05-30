@@ -22,10 +22,12 @@ export function MobileNav() {
             </SheetTrigger>
             <SheetContent side="right" className="p-4">
                 <MobileLink onOpenChange={setOpen} href="/" className="flex items-center">
-                    <Icons.logo className="mr-2 h-4 w-4" />
-                    <span className="font-bold">{siteConfig.name}</span>
+                <img className="h-8 w-auto" src="/images/roddahay-logo.svg" alt="Rod Dahay" />
                 </MobileLink>
                 <div className="flex flex-col gap-3 mt-3">
+                    <MobileLink onOpenChange={setOpen} href="/">
+                        Home
+                    </MobileLink>
                     <MobileLink onOpenChange={setOpen} href="/portfolio">
                         Portfolio
                     </MobileLink>

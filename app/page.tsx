@@ -14,10 +14,10 @@ export default function Home() {
     <>
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
         <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-balance">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6">
           Hi, I Design & Develop <span className="inline-block sm:block">Digital Experiences</span>
           </h1>
-          <p className="max-w-[90rem] mx-auto text-muted-foreground sm:text-xl text-balance mb-5">
+          <p className="max-w-[90rem] mx-auto font-light sm:text-xl mb-10">
           I'm Rod Dahay, a passionate UI designer and developer. Explore my portfolio to see my professional work and innovative projects built with WordPress, React/Next.js, and Angular.
           </p>
           <div className="flex flex-col gap-4 justify-center sm:flex-row">
@@ -25,10 +25,10 @@ export default function Home() {
               href="/portfolio"
               className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-fit")}
             >
-              View my Portfolio
+              View Current Portfolio
             </Link>
             <Link
-              href={siteConfig.links.github}
+              href="https://odedahay.github.io/assets/rodelio_dahay_portfolio.pdf"
               target="_blank"
               rel="noreferrer"
               className={cn(
@@ -36,14 +36,14 @@ export default function Home() {
                 "w-full sm:w-fit"
               )}
             >
-              GitHub
+              View Archive Portfolio
             </Link>
           </div>
         </div>
       </section>
       {/* <div className="container mx-auto flex h-14 max-w-screen-2xl items-center"></div> */}
       <section className="container mx-auto max-w-6xl py-6 lg:py-10 flex flex-col space-y-6">
-      <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center">
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-center">
           Latest Portfolio
         </h2>
         <ul className="flex flex-col">

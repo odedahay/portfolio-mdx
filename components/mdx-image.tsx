@@ -25,7 +25,7 @@ export function MDXImage({ src, alt, title }: MDXImageProps) {
           className="rounded-lg"
           style={{ objectFit: "contain" }}
         />
-        {title && <p className="mt-2 text-sm text-muted-foreground">{title}</p>}
+        {title && <span className="mt-2 text-sm text-muted-foreground">{title}</span>}
       </span>
       <Lightbox
         open={isOpen}

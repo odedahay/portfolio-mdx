@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils"
 
 export function MainNav() {
     const pathname = usePathname();
+    const isPortfolioPage = pathname === "/portfolio" || pathname.startsWith("/portfolio/");
+    
     return (
         <nav className="flex items-center space-x-4 lg:space-x-6">
             <Link href="/" className="mr-6 flex items-center space-x-2">
@@ -15,20 +17,20 @@ export function MainNav() {
             </Link>
             <Link href="/portfolio"
                 className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-                    pathname === "/portfolio" ? "text-foreground" : "text-foreground/60"
+                    "text-md font-medium transition-colors hover:text-primary hidden sm:inline-block",
+                    isPortfolioPage ? "text-pink-500" : "text-foreground/60"
                 )}>Portfolio
             </Link>
             <Link href="/about-me"
                 className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-                    pathname === "/about-me" ? "text-foreground" : "text-foreground/60"
+                    "text-md font-medium transition-colors hover:text-primary hidden sm:inline-block",
+                    pathname === "/about-me" ? "text-pink-500" : "text-foreground/60"
                 )}>About Me
             </Link>
             <Link href="/contact"
                 className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-                    pathname === "/contact" ? "text-foreground" : "text-foreground/60"
+                    "text-md font-medium transition-colors hover:text-primary hidden sm:inline-block",
+                    pathname === "/contact" ? "text-pink-500" : "text-foreground/60"
                 )}>Contact
             </Link>
         </nav>
