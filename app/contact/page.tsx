@@ -1,18 +1,22 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Metadata } from "next";
+import { SVGProps } from "react";
 
 export const metadata: Metadata = {
     title: "Get in touch",
     description: "Get in touch with me",
   };
 
+interface IconProps extends SVGProps<SVGSVGElement> {
+    className?: string;
+}
+
 const socialLinks = [
 
     {
         name: 'Instagram',
         href: 'https://www.instagram.com/odedahay/',
-        icon: (props: any) => (
+        icon: (props: IconProps) => (
             <svg fill="#f472b6" viewBox="0 0 50 50" {...props}>
                 <path
                     d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"
@@ -23,7 +27,7 @@ const socialLinks = [
     {
         name: 'LinkedIn',
         href: 'https://www.linkedin.com/in/rodelio-dahay/',
-        icon: (props: any) => (
+        icon: (props: IconProps) => (
             <svg fill="#f472b6" viewBox="0 0 50 50" {...props}>
                 <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z" />
             </svg>
@@ -33,7 +37,7 @@ const socialLinks = [
     {
         name: 'GitHub',
         href: 'https://github.com/odedahay',
-        icon: (props: any) => (
+        icon: (props: IconProps) => (
             <svg fill="#f472b6" viewBox="0 0 24 24" {...props}>
                 <path
                     fillRule="evenodd"
@@ -53,7 +57,7 @@ const ContactPage = () => {
             <section className="h-[65vh]">
                 <div className="py-8 lg:py-16 px-4 text-center">
                     <h2 className="inline-block text-3xl sm:text-5xl md:text-6xl font-semibold mb-8">Get in touch</h2>
-                    <p className="mb-8 lg:mb-16 font-light sm:text-xl">Get in touch with me if you have any questions, need assistance, or simply want to discuss a project. I'm always available and eager to connect. Feel free to reach out and let's start a conversation!</p>
+                    <p className="mb-8 lg:mb-16 font-light sm:text-xl">Get in touch with me if you have any questions, need assistance, or simply want to discuss a project. I&apos;m always available and eager to connect. Feel free to reach out and let&apos;s start a conversation!</p>
 
 
                     <div className="mt-8 flex justify-center space-x-6 gap-5 flex-col md:flex-row">
@@ -74,10 +78,10 @@ const ContactPage = () => {
 
                     <div className="mt-8 flex justify-center space-x-6 gap-3">
                         {socialLinks.map((item) => (
-                            <a rel='noreferrer' target="_blank" key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                            <Link rel='noreferrer' target="_blank" key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                                 <span className="sr-only">{item.name}</span>
                                 <item.icon className="h-10 w-10" aria-hidden="true" />
-                            </a>
+                            </Link>
                         ))}
                     </div>
 

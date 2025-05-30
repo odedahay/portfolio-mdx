@@ -54,6 +54,6 @@ export async function GET(req: NextRequest) {
             ],
         });
     } catch (error) {
-        return new Response("Failed to generate image", { status: 500 });
+        return new Response(`Failed to generate image: ${error instanceof Error ? error.message : 'Unknown error'}`, { status: 500 });
     }
 }

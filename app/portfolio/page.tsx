@@ -76,7 +76,7 @@ export default async function PortfolioPage({searchParams}: PortfolioPageProps) 
                     <CardHeader>
                         <CardTitle className="text-2xl">Tags</CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-wrap gap-2 [&_a]:text-base">
+                    <CardContent className="flex flex-wrap gap-2 [&_a]:text-[14px]">
                        {sortedTags?.map((tag) => <Tag tag={tag} key={tag} count={tags[tag]} />)}
                     </CardContent>
                 </Card>

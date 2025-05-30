@@ -1,10 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { Icons } from "./icons"
-import { siteConfig } from "@/config/site"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import Image from "next/image";
 
 export function MainNav() {
     const pathname = usePathname();
@@ -13,7 +12,13 @@ export function MainNav() {
     return (
         <nav className="flex items-center space-x-4 lg:space-x-6">
             <Link href="/" className="mr-6 flex items-center space-x-2">
-                <img className="h-8 w-auto" src="/images/roddahay-logo.svg" alt="Rod Dahay" />
+                <Image 
+                    className="h-8 w-auto" 
+                    src="/images/roddahay-logo.svg" 
+                    alt="Rod Dahay"
+                    width={32}
+                    height={32}
+                />
             </Link>
             <Link href="/portfolio"
                 className={cn(

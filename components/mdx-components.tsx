@@ -2,7 +2,7 @@
 
 import * as runtime from "react/jsx-runtime";
 import { Callout } from "./callout";
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils";
 import { MDXImage } from "./mdx-image";
 
 const useMDXComponent = (code: string) => {

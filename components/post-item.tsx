@@ -3,7 +3,6 @@ import { ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "./ui/button";
-import { Icons } from "./icons";
 import { Tag } from "./tags";
 
 interface PostItemProps {

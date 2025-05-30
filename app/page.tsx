@@ -1,8 +1,6 @@
-import Image from "next/image";
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import Link from "next/link";
 import { cn, sortPosts } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 
@@ -18,7 +16,7 @@ export default function Home() {
           Hi, I Design & Develop <span className="inline-block sm:block">Digital Experiences</span>
           </h1>
           <p className="max-w-[90rem] mx-auto font-light sm:text-xl mb-10">
-          I'm Rod Dahay, a passionate UI designer and developer. Explore my portfolio to see my professional work and innovative projects built with WordPress, React/Next.js, and Angular.
+          I&apos;m Rod Dahay, a passionate UI designer and developer. Explore my portfolio to see my professional work and innovative projects built with WordPress, React/Next.js, and Angular.
           </p>
           <div className="flex flex-col gap-4 justify-center sm:flex-row">
             <Link

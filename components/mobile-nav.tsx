@@ -6,8 +6,8 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
-import { Icons } from "./icons";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
 export function MobileNav() {
     const [open, setOpen] = useState(false);
@@ -22,7 +22,13 @@ export function MobileNav() {
             </SheetTrigger>
             <SheetContent side="right" className="p-4">
                 <MobileLink onOpenChange={setOpen} href="/" className="flex items-center">
-                <img className="h-8 w-auto" src="/images/roddahay-logo.svg" alt="Rod Dahay" />
+                    <Image 
+                        className="h-8 w-auto" 
+                        src="/images/roddahay-logo.svg" 
+                        alt="Rod Dahay"
+                        width={32}
+                        height={32}
+                    />
                 </MobileLink>
                 <div className="flex flex-col gap-3 mt-3">
                     <MobileLink onOpenChange={setOpen} href="/">
