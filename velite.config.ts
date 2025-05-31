@@ -27,8 +27,8 @@ export default defineConfig({
     root: "content",
     output: {
         data: ".velite",
-        assets: "public/static",
-        base: "/static/",
+        assets: "public",
+        base: "/",
         name: "[name].[hash:6].[ext]",
         clean: true,
     },
@@ -51,5 +51,4 @@ export default defineConfig({
         ],
         remarkPlugins: []
     }
-
 })
