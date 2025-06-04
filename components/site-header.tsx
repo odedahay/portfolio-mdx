@@ -30,7 +30,7 @@ export function SiteHeader() {
               </div>
             </Link>
             <Link
-              href={siteConfig.links.twitter}
+              href={siteConfig.links.linkedin}
               target="_blank"
               rel="noreferrer"
             >
@@ -41,7 +41,7 @@ export function SiteHeader() {
                 )}
               >
                 <Icons.linkedIn className="h-6 w-6" />
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">LinkedIn</span>
               </div>
             </Link>
             <ModeToggle />
