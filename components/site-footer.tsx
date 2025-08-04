@@ -44,10 +44,10 @@ export function SiteFooter() {
                             <div>
                                 <h4 className="text-lg font-medium uppercase text-blue-9">Navigation</h4>
                                 <ul>
-                                    <li><a href="/tags/web-design" className="hover:underline">Home</a></li>
-                                    <li><a href="/tags/graphic-design" className="hover:underline">Portfolio</a></li>
-                                    <li><a href="/tags/logo" className="hover:underline">About Me</a></li>
-                                    <li><a href="/tags/tech" className="hover:underline">Contact</a></li>
+                                    <li><a href="/" className="hover:underline">Home</a></li>
+                                    <li><a href="/portfolio" className="hover:underline">Portfolio</a></li>
+                                    <li><a href="/about-me" className="hover:underline">About Me</a></li>
+                                    <li><a href="/contact" className="hover:underline">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
