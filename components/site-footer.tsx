@@ -35,10 +35,11 @@ export function SiteFooter() {
                             <div>
                                 <h4 className="text-lg font-medium uppercase text-blue-9">Category</h4>
                                 <ul>
-                                    <li><a href="/tags/web-design" className="hover:underline">Web Design</a></li>
-                                    <li><a href="/tags/graphic-design" className="hover:underline">Graphic Design</a></li>
-                                    <li><a href="/tags/logo" className="hover:underline">Logo</a></li>
-                                    <li><a href="/tags/tech" className="hover:underline">About Tech</a></li>
+                                    <li><a href="/tags/web-design" className="hover:underline">UX/UI Design</a></li>
+                                    <li><a href="/tags/graphic-design" className="hover:underline">Front-End Development</a></li>
+                                    {/* <li><a href="/tags/graphic-design" className="hover:underline">Cross-Platform Apps</a></li> */}
+                                    <li><a href="/tags/logo" className="hover:underline">Logo Design</a></li>
+                                    <li><a href="/tags/tech" className="hover:underline">Technology Solutions</a></li>
                                 </ul>
                             </div>
                             <div>
