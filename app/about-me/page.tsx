@@ -29,7 +29,7 @@ export default function AboutMe() {
                             {siteConfig.author}
                         </h2>
                         <p className="text-muted-foreground text-center break-words">
-                            Web Designer and Developer
+                           Unicorn Designer
                         </p>
                     </div>
                     <div className="mt-0">
