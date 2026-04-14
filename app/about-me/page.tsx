@@ -38,11 +38,20 @@ export default function AboutMe() {
                                 <div>
                                     <div className="space-y-6">
                                         <p className="text-md">
-                                            I’m a UI designer and developer passionate about crafting websites and creating interactive, user-friendly designs that leave a lasting impression.
+                                           I'm a unicorn designer, which means I can both design and develop websites, and also build mobile apps. I enjoy creating user-friendly digital experiences that are easy to use, visually clean, and effective. I've worked across multiple industries, delivering solutions through email campaigns, landing pages, websites, and mobile apps that improve usability and performance.
                                         </p>
+                                        <p className="text-md">
+                                           I also work in front-end development, building different web platforms using tools like WordPress and low-code solutions. Previously, I worked in a B2B development team where I used Angular and Tailwind CSS. I enjoy collaborating with product managers, clients, and marketing teams, contributing ideas from both design and development to create smooth user experiences. Outside of work, I explore creative coding and volunteering, which inspire my design approach and communication skills.
+
+                                        </p>
+                                         <p className="text-md">
+                                           So, what is a “unicorn designer”? It’s someone who can handle both design and development. This means having skills in UX/UI design, visual design, and coding. It allows me to take ideas from concept to a fully working product, making the process faster, smoother, and more efficient.
+
+                                        </p>
+                                        <p className="text-md">Thanks for reading my short biography 🙂</p>
                                     </div>
                                 </div>
-                                <div className="mt-5">
+                                {/* <div className="mt-5">
                                     <h3 className="text-md font-bold">Core Expertise:</h3>
                                     <div className="mt-4 pl-2">
                                         <p className="font-bold text-md mb-2 dark:text-gray-200">HTML Email Mastery</p>
@@ -105,7 +114,7 @@ export default function AboutMe() {
                                             </p>
                                         </article>
                                     </div>
-                                </div>
+                                </div> */}
                     </article>
                 </div>
             </div>
