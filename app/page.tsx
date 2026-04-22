@@ -15,7 +15,7 @@ export default function Home() {
           {/* <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6">
           Hi, I Design & Develop <span className="inline-block sm:block">Digital Experiences</span>
           </h1> */}
-          <div className="relative left-1/2 mb-8 aspect-video w-screen -translate-x-1/2 overflow-hidden lg:my-5 lg:w-[calc(100vw-40px)]">
+          <div className="relative left-1/2 mb-8 aspect-square w-screen -translate-x-1/2 overflow-hidden md:aspect-video lg:my-5 lg:w-[calc(100vw-40px)]">
             <picture>
               <source
                 media="(max-width: 719px)"
@@ -24,7 +24,7 @@ export default function Home() {
               <img
                 src="/images/Storyboard-portfolio.jpg"
                 alt="Storyboard portfolio banner"
-                className="h-full w-full object-contain object-center"
+                className="h-full w-full object-cover object-center md:object-contain"
               />
             </picture>
           </div>
