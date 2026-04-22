@@ -10,11 +10,24 @@ export default function Home() {
 
   return (
     <>
-      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
+      <section className="space-y-6 pb-8 pt-0 md:pb-12 lg:pb-32">
         <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+          {/* <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6">
           Hi, I Design & Develop <span className="inline-block sm:block">Digital Experiences</span>
-          </h1>
+          </h1> */}
+          <div className="relative left-1/2 mb-8 h-full min-h-[280px] w-screen -translate-x-1/2 overflow-hidden sm:h-[65vh] sm:min-h-[380px] lg:my-5 lg:h-[calc(100vh-60px)] lg:min-h-[560px] lg:w-[calc(100vw-40px)]">
+            <picture>
+              <source
+                media="(max-width: 719px)"
+                srcSet="/images/Storyboard-portfolio-m.jpg"
+              />
+              <img
+                src="/images/Storyboard-portfolio.jpg"
+                alt="Storyboard portfolio banner"
+                className="h-full w-full object-cover object-center"
+              />
+            </picture>
+          </div>
           <p className="max-w-[90rem] mx-auto font-light sm:text-xl mb-10">
           I&apos;m Rod Dahay, a passionate UI designer and developer. Explore my portfolio to see my professional work and innovative projects built with WordPress, React/Next.js, and Angular.
           </p>

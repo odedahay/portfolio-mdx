@@ -10,7 +10,7 @@ import { ModeToggle } from "./mode-toggle";
 export function SiteHeader() {
   return (
     <header className="z-10 sticky top-0 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-14 max-w-screen-2xl items-center">
+      <div className="container mx-auto flex h-[80px] max-w-screen-2xl items-center" >
         <MainNav />
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center">
@@ -22,10 +22,10 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  "w-10 px-0 hidden sm:inline-flex"
+                  "w-12 px-0 hidden sm:inline-flex"
                 )}
               >
-                <Icons.gitHub className="h-6 w-6" />
+                <Icons.gitHub className="size-7" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
@@ -37,10 +37,10 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  "w-10 px-0 hidden sm:inline-flex"
+                  "w-12 px-0 hidden sm:inline-flex"
                 )}
               >
-                <Icons.linkedIn className="h-6 w-6" />
+                <Icons.linkedIn className="size-7" />
                 <span className="sr-only">LinkedIn</span>
               </div>
             </Link>
