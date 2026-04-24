@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 const POSTS_PER_PAGE = 5;
 
 interface PortfolioPageProps{
-    searchParams:{
+    searchParams: Promise<{
         page?: string;
-    }
+    }>
 }
 
 export default async function PortfolioPage({searchParams}: PortfolioPageProps) {

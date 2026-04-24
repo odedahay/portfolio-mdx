@@ -8,7 +8,9 @@ import { MDXContent } from "@/components/mdx-components";
 import { Tag } from "@/components/tags";
 import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { slug: string[] } }): Promise<Metadata> {
+type PostPageParams = Promise<{ slug: string[] }>;
+
+export async function generateMetadata({ params }: { params: PostPageParams }): Promise<Metadata> {
     const post = await getPostFromParams(params);
     if (!post) {
         return {}
@@ -37,12 +39,14 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
     };
 }
 
-async function getPostFromParams(params: { slug: string[] }) {
-    if (!params?.slug) {
+async function getPostFromParams(params: PostPageParams) {
+    const resolvedParams = await params;
+
+    if (!resolvedParams?.slug) {
         return null;
     }
 
-    const slug = params.slug.join("/");
+    const slug = resolvedParams.slug.join("/");
     const post = posts.find((post) => post.slugAsParams === slug);
     return post;
 }
@@ -51,7 +55,7 @@ export async function generateStaticParams(): Promise<{ slug: string[] }[]> {
     return posts.map((post) => ({ slug: post.slugAsParams.split("/") }));
 }
 
-export default async function PostPage({ params }: { params: { slug: string[] } }) {
+export default async function PostPage({ params }: { params: PostPageParams }) {
     const post = await getPostFromParams(params);
 
     if (!post || !post.published) {
