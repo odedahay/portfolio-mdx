@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   };
 
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 12;
 
 interface PortfolioPageProps{
     searchParams: Promise<{

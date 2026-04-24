@@ -12,7 +12,7 @@ export default function Home() {
   const featuredSlugs = [
     "portfolio/easyconnect-mobile",
     "portfolio/aquaforma-microsite",
-    "portfolio/turn-by-turn-web",
+    "portfolio/spg-landingpage-crm",
   ];
   const featuredPosts = featuredSlugs
     .map((slug) => posts.find((post) => post.slug === slug && post.published))
@@ -49,7 +49,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="px-5 py-10 sm:px-6 lg:px-8 lg:py-12">
+      <section className="px-5 pb-10 sm:px-6 lg:px-8 lg:pb-12 border-border border-b">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-8">
           <div className="w-full">
             <h2 className="text-3xl font-semibold tracking-[-0.03em] text-black sm:text-4xl md:text-[45px]">
@@ -98,30 +98,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-         
-          <div className="flex flex-col gap-4 justify-center sm:flex-row">
-            <Link
-              href="/portfolio"
-              className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-fit")}
-            >
-              View Current Portfolio
-            </Link>
-            <Link
-              href="https://odedahay.github.io/assets/rodelio_dahay_portfolio.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "w-full sm:w-fit"
-              )}
-            >
-              View Archive Portfolio
-            </Link>
-          </div>
-      </section>
+      
       {/* <div className="container mx-auto flex h-14 max-w-screen-2xl items-center"></div> */}
-      <section className="container mx-auto max-w-6xl py-6 lg:py-10 flex flex-col space-y-6">
+      <section className="container mx-auto max-w-6xl py-12 lg:pt-24 flex flex-col space-y-6 ">
       <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal text-center">
           Latest Portfolio
         </h2>
@@ -139,6 +118,28 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      </section>
+      <section className="px-5 py-12 sm:px-6 lg:px-8 lg:pt-12">
+         
+          <div className="flex flex-col gap-4 justify-center sm:flex-row">
+            {/* <Link
+              href="/portfolio"
+              className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-fit")}
+            >
+              View Current Portfolio
+            </Link> */}
+            <Link
+              href="https://odedahay.github.io/assets/rodelio_dahay_portfolio.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "w-full sm:w-fit"
+              )}
+            >
+              View Archive Portfolio
+            </Link>
+          </div>
       </section>
      
     </>
