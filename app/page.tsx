@@ -44,7 +44,7 @@ export default function Home() {
             </picture>
           </div>
           </Link>
-            <p className="max-w-[90rem] mx-auto font-light sm:text-xl mb-10">
+            <p className="max-w-[90rem] mx-auto font-light sm:text-xl mb-10 text-left">
           I&apos;m Rod Dahay, a passionate UI designer and developer. Explore my portfolio to see my professional work and innovative projects built with WordPress, React/Next.js, and Angular.
           </p>
         </div>
@@ -52,9 +52,12 @@ export default function Home() {
       <section className="px-5 pb-10 sm:px-6 lg:px-8 lg:pb-12 border-border border-b">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-8">
           <div className="w-full">
-            <h2 className="text-3xl font-semibold tracking-[-0.03em] text-black sm:text-4xl md:text-[45px]">
+            {/* <h2 className="text-3xl font-semibold tracking-[-0.03em] text-black sm:text-4xl md:text-[45px]">
               Featured Work
-            </h2>
+            </h2> */}
+             <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal">
+          Featured Work
+        </h2>
           </div>
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 xl:gap-[24px]">
             {featuredPosts.map((post) => (
@@ -101,7 +104,7 @@ export default function Home() {
       
       {/* <div className="container mx-auto flex h-14 max-w-screen-2xl items-center"></div> */}
       <section className="container mx-auto max-w-6xl py-12 lg:pt-24 flex flex-col space-y-6 ">
-      <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal text-center">
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal">
           Latest Portfolio
         </h2>
         <ul className="flex flex-col">
