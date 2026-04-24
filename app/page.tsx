@@ -30,18 +30,17 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
           >
-          <div className="relative left-1/2 mb-8 h-[1080px] w-screen -translate-x-1/2 overflow-hidden sm:h-[420px] md:h-[560px] lg:my-5 lg:h-[900px] lg:w-[calc(100vw-40px)]">
-            <picture>
-              <source
-                media="(max-width: 719px)"
-                srcSet="/images/Storyboard-portfolio-m.jpg"
-              />
-              <img
-                src="/images/Storyboard-portfolio.jpg"
-                alt="Storyboard portfolio banner"
-                className="h-full w-full object-cover object-center"
-              />
-            </picture>
+          <div className="relative left-1/2 mb-8 w-screen -translate-x-1/2 overflow-hidden lg:my-5 lg:w-[calc(100vw-40px)]">
+            <img
+              src="/images/Storyboard-portfolio-m.jpg"
+              alt="Storyboard portfolio banner"
+              className="block aspect-square w-full object-cover object-center sm:hidden"
+            />
+            <img
+              src="/images/Storyboard-portfolio.jpg"
+              alt="Storyboard portfolio banner"
+              className="hidden h-[420px] w-full object-cover object-center sm:block md:h-[560px] lg:h-[900px]"
+            />
           </div>
           </Link>
             <p className="max-w-[90rem] mx-auto font-light sm:text-xl mb-10 text-left">
