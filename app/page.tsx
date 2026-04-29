@@ -39,7 +39,7 @@ export default function Home() {
             <img
               src="/images/Storyboard-portfolio.jpg"
               alt="Storyboard portfolio banner"
-              className="hidden h-[420px] w-full object-cover object-center sm:block md:h-[560px] lg:h-[900px]"
+              className="hidden h-[clamp(300px,44.800vw,820px)] w-full object-cover object-center sm:block"
             />
           </div>
           </Link>
