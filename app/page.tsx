@@ -6,6 +6,27 @@ import { PostItem } from "@/components/post-item";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
+const services = [
+  {
+    title: "Design",
+    description:
+      "User-centered design through research, wireframes, and scalable design systems.",
+    icon: "/images/icon-what-i-do-design.svg",
+  },
+  {
+    title: "Development",
+    description:
+      "Responsive, high-performance interfaces using React, Angular, and modern web technologies.",
+    icon: "/images/icon-what-i-do-development.svg",
+  },
+  {
+    title: "Optimization",
+    description:
+      "Improve usability, performance, and accessibility to increase product effectiveness.",
+    icon: "/images/icon-what-i-do-optimization.svg",
+  },
+];
+
 export default function Home() {
 
   const latestPosts = sortPosts(posts).filter((post) => post.published).slice(0, 5);
@@ -39,13 +60,51 @@ export default function Home() {
             <img
               src="/images/Storyboard-portfolio.jpg"
               alt="Storyboard portfolio banner"
-              className="hidden h-[clamp(300px,44.800vw,820px)] w-full object-cover object-center sm:block"
+              className="hidden h-[clamp(300px,44.800vw,900px)] w-full object-cover object-center sm:block"
             />
           </div>
           </Link>
-            <p className="max-w-[90rem] mx-auto font-light sm:text-xl mb-10 text-left">
+            {/* <p className="max-w-[90rem] mx-auto font-light sm:text-xl mb-10 text-left">
           I&apos;m Rod Dahay, a passionate UI designer and developer. Explore my portfolio to see my professional work and innovative projects built with WordPress, React/Next.js, and Angular.
-          </p>
+          </p> */}
+        </div>
+      </section>
+      <section className="px-5 py-10 sm:px-6 lg:px-8 lg:pb-24">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-[30px]">
+          <div className="flex flex-col gap-2.5 text-black">
+          
+             <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal">
+              What I Do
+            </h2>
+            <p className="text-base font-normal sm:text-lg">
+              I design and build digital products that are fast, scalable, and user-focused.
+            </p>
+          </div>
+          <div className="rounded-xl bg-[#f9f7f7] px-5 py-10">
+            <div className="grid gap-8 lg:grid-cols-3 lg:gap-6">
+              {services.map((service) => (
+                <article
+                  key={service.title}
+                  className="flex flex-col gap-4 text-black sm:flex-row sm:items-center"
+                >
+                  <img
+                    src={service.icon}
+                    alt=""
+                    className="size-20 shrink-0 sm:size-[110px]"
+                    aria-hidden="true"
+                  />
+                  <div className="flex flex-col gap-[5px]">
+                    <h3 className="text-2xl font-semibold tracking-[-0.02em] md:text-[28px]">
+                      {service.title}
+                    </h3>
+                    <p className="text-base leading-normal sm:text-lg">
+                      {service.description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
       <section className="px-5 pb-10 sm:px-6 lg:px-8 lg:pb-12 border-border border-b">
