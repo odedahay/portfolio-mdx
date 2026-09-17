@@ -183,12 +183,12 @@ export default function Home() {
       <section className="px-5 py-12 sm:px-6 lg:px-8 lg:pt-12">
          
           <div className="flex flex-col gap-4 justify-center sm:flex-row">
-            {/* <Link
+            <Link
               href="/portfolio"
               className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-fit")}
             >
               View Current Portfolio
-            </Link> */}
+            </Link>
             <Link
               href="https://odedahay.github.io/assets/rodelio_dahay_portfolio.pdf"
               target="_blank"
