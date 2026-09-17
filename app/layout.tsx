@@ -8,6 +8,8 @@ import { Providers } from "@/components/providers";
 import { siteConfig } from "@/config/site";
 import { SiteFooter } from "@/components/site-footer";
 
+import Script from "next/script";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"]
@@ -42,6 +44,21 @@ export default function RootLayout({
         )}
         suppressHydrationWarning
       >
+        {/* Start GA4 code here */}
+
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-W5TKC5V67E"></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-W5TKC5V67E');
+          `}
+        </Script>
+
+        {/* End  */}
         <Providers>
           <div className="relative flex min-h-dvh flex-col bg-background p-5 sm:p-0">
             <SiteHeader />
