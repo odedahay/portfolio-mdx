@@ -46,16 +46,18 @@ export default function RootLayout({
       >
        
         {/* <!-- Google tag (gtag.js) --> */}
-        {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C4P8LW626R"></Script>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-        window.dataLayer = window.dataLayer || [];
+<Script async src="https://www.googletagmanager.com/gtag/js?id=G-C4P8LW626R"></Script>
+  <Script id="google-analytics" strategy="afterInteractive">
+  {
+    `  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-C4P8LW626R');
-          `}
-        </Script> */}
+    `
+  }
+
+</Script>
 
         {/* End  */}
         <Providers>
